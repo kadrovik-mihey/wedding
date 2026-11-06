@@ -96,7 +96,7 @@
 // Пока время не сообщено, отсчёт идёт до начала дня по московскому времени.
 const WEDDING_DATE='2027-05-24T00:00:00+03:00';
 // Вставьте сюда URL развёрнутого веб-приложения Google Apps Script по инструкции.
-const GOOGLE_SCRIPT_URL='https://script.google.com/macros/s/AKfycbyRjhT-rxie4EF2Zha-4XrJ67zH2GmTpOHknfN0h7-vbettZh9kY8XEfVprnIAXGsgm/exec';
+const GOOGLE_SCRIPT_URL='https://script.google.com/macros/s/AKfycbzION_oOkkTzCRcoAxHgdWyt3f1QCxph7u36bu_en1fIXHbUW4vlMdxsu8GQyBMFMtl/exec';
 function updateTimer(){let diff=Math.max(0,new Date(WEDDING_DATE).getTime()-Date.now()),s=Math.floor(diff/1000);document.getElementById('days').textContent=String(Math.floor(s/86400)).padStart(2,'0');document.getElementById('hours').textContent=String(Math.floor(s/3600)%24).padStart(2,'0');document.getElementById('minutes').textContent=String(Math.floor(s/60)%60).padStart(2,'0');document.getElementById('seconds').textContent=String(s%60).padStart(2,'0');if(!diff)document.getElementById('countdown-label').textContent='Этот день настал!';}updateTimer();setInterval(updateTimer,1000);
 const form=document.getElementById('guest-form'),result=document.getElementById('result');
 // При отказе скрываем только вопросы о предпочтениях.
